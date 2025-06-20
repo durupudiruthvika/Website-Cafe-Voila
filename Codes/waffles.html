@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Waffles</title>
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+ background-image: url("menu1.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-color: #f1f1f1;
+     
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      opacity:80%;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .menu-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      opacity:85%;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-item {
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    .menu-item img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-right: 20px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu-item h2 {
+      margin: 0;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .menu-item p {
+      margin: 10px 0;
+    }
+
+    .menu-item .price {
+      font-weight: bold;
+    }
+     .serves-box {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: #FFC0CB;
+      color: #fff;
+      padding: 5px;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+
+     body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .footer {
+     
+       background-color: #333;
+      opacity:80%;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      bottom: 0;
+      width: 97%;
+      animation: slide-up 0.5s ease;
+    }
+    
+    .footer p {
+      margin: 0;
+    }
+    
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .footer .social-icons a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      color: #352b19;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 5px;
+      transition: background-color 0.3s;
+    }
+    
+    .footer .social-icons a:hover {
+      background-color: #f9f9f9;
+    }
+    
+    .footer .navigation-links a {
+      margin-right: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    
+    .footer .navigation-links a:hover {
+      opacity: 0.8;
+    }
+    
+    .footer .newsletter-subscription input[type="email"] {
+      padding: 5px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      width: 200px;
+    }
+    
+    .footer .newsletter-subscription button {
+      background-color: #fff;
+      color: #352b19;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    @keyframes slide-up {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+
+
+
+    .menu-buttons {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .menu-buttons a {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-decoration: none;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+
+    .menu-buttons a:hover {
+      background-color: #555;
+    }
+   .tag {
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: bold;
+  }
+  
+  /* ...existing styles... */
+
+  .tag-new {
+    background-color: #ffff99;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .tag-new1 {
+    background-color:#E6E6FA ;
+    color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  /* ...existing styles... */
+.ribbon {
+  width: 60px;
+  font-size: 14px;
+  padding: 4px;
+  position: relative;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(60deg);
+  color: white;
+}
+ 
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Our Waffle Delight</h1>
+    <div class="menu-buttons">
+      <a href="icecreams.html">Ice Creams</a>
+      <a href="boba.html">Bubble tea</a>
+      <a href="waffles.html">Waffles</a>
+      <a href="addtocart.html">Cakes</a>
+      <a href="snacks.html">Snacks and Shakes</a>
+<a href=" offers.html"><span class="ribbon"><img src="star.png"width="20px" height="20px";></span>Offers</a>
+    </div>
+  </header>
+
+<div class="menu-container">
+    <div class="menu-item">
+    
+      <img src="https://lh3.googleusercontent.com/ToDBqJkd4pqANpebOB-7YJnxT3qtF1pN2kjvNsP4brjYiEN7SKzmAGh0IfXO2U4RPcjYYu8EoqXMfroveW7XHw_4x8hDGvYzjn3eW88=w128-rw"alt="Item 1">
+      <div>
+        <h2>Black & White Chocolate Pocket Waffle</h2><br>
+          <span class="tag-new1">Contains Egg</span>
+        <p>Pocket waffle loaded with dark chocolate and white chocolate.</p>
+        <p class="price"><del style="opacity:0.5;font-weight:lighter;">&#8377;260</del>&#8377;155<br></p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRoXHL35aLbMBdikOwAQol3y_Ua5igkX532EwYZhVbgdFRMbDIiu2iahDcv91wNiYRR3DWeFMd85An1VD2IRMwj1hYakFn2pC9vDFJIhG4&usqp=CAE" alt="Item 2">
+      <div>
+        <h2>Belgian liege Waffles</h2>
+        <p>A photogenic beverage with a pleasing vibrant green appearance.</p>
+        <p class="price"><del style="opacity:0.5;font-weight:lighter;">&#8377;258</del>&#8377;399</p>
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://content.jdmagicbox.com/comp/pune/s1/020pxx20.xx20.190131150201.h4s1/catalogue/best-belgian-waffle-katraj-pune-restaurants-5s62yvzqn8.jpg" alt="Item 3">
+      <div>
+        <h2>KitKat Waffle
+ </h2>
+<br>
+         <span class="tag">Best Selling</span>
+        <p>Grab youself a KitKat break
+
+
+
+</p>
+        
+        <p class="price">&#8377;215</p>
+        
+   
+      </div>
+    </div>
+
+    <div class="menu-item">
+      <img src="https://rebelplus.faasos.io/production/wildfire_cms/7X8FYIYUIP.jpeg?d=375&tr:w-0.5,h-0.5" alt="Item 2">
+      <div>
+        <h2>Club Velvet</h2>
+        <p>Original Red Velvet Waffle+Philadelphia Style cream Cheese and melted Belgian white chocolate.</p>
+        <p class="price">&#8377;220</p>
+      </div>
+    </div>
+<div class="menu-item">
+      <img src="https://rebelplus.faasos.io/production/wildfire_cms/SWKKHBTXUH.jpeg?d=375&tr:w-0.5,h-0.5" alt="Item 2">
+      <div>
+        <h2>Rocky Road</h2>
+        <p> Signature dark chocolate Waffle+Vanilla Ice Cream+Oreo+Roasted Almonds+Fudge.</p>
+        <p class="price">&#8377;190</p>
+      </div>
+    </div>
+<div class="menu-item">
+      <img src="https://rebelplus.faasos.io/production/wildfire_cms/LZ7HC5UFIZ.jpeg?d=375&tr:w-0.5,h-0.5" alt="Item 2">
+      <div>
+        <h2>Almond Cocoa Butter</h2>
+        <p>Classic crispy Waffle+Cocoa Butter topped with roasted almonds.
+
+ </p>
+        <p class="price">&#8377;211</p>
+      </div>
+    </div>
+<div class="menu-item">
+      <img src="https://rebelplus.faasos.io/production/wildfire_cms/SLEVEUUJKF.jpeg?d=375&tr:w-0.5,h-0.5" alt="Item 2">
+      <div>
+        <h2> The Belgian Club </h2>
+        <p> Buy3 and get a free delight.
+
+</p>
+        <p class="price">&#8377;410</p>
+       
+      </div>
+    </div>
+<div class="menu-item">
+      <img src="https://rebelplus.faasos.io/production/wildfire_cms/NKY2RGJPWH.jpeg?d=375&tr:w-0.5,h-0.5" alt="Item 2">
+      <div>
+        <h2>Banoffe Sundae(small) </h2>
+        <p>Dense vanilla icecream paired with classic waffle chunks..</p>
+        <p class="price">&#8377;168</p>
+      </div>
+    </div>
+<div class="menu-item">
+      <img src="https://rebelplus.faasos.io/production/wildfire_cms/UQVWRHKEQE.jpeg?d=375&tr:w-0.5,h-0.5" alt="Item 2">
+      <div>
+        
+        <h2>Strawberry Creamcheese Waffle</h2>
+<br>
+          <span class="tag-new">New Item</span>
+        <p>Classic crispy waffle+Strawberry compote layered with style cream chesse.
+
+ </p>
+        <p class="price">&#8377;174</p>
+      </div>
+    </div>
+    
+  </div>
+
+  <footer> <!-- Your website content goes here -->
+  
+  <footer class="footer">
+    <div class="contact-information">
+      <p>Cafe Voila</p>
+      <p>Email: <a href="mailto:info@restaurant.com">info@restaurant.com</a></p>
+           <p>Address: Bangalore, Karnataka<br><a style="color:bisque;"href="https://www.google.com/maps/place/Cafe+Voila/@12.882231,74.8381067,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba35b7bb6529a5f:0x8dffda8b723dec95!8m2!3d12.882231!4d74.8406816!16s%2Fg%2F11kc2ml2dh?entry=ttu">&#x1F4CD;Know Our Location</a></p>
+    </div>
+    </div>
+    
+    <div class="opening-hours">
+      <p>Opening Hours:</p>
+      <p>Monday-Saturday: 11:00 AM - 10:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+    
+    <div class="social-icons">
+      
+      <a href="#" target="_blank"><img src="instagram-icon.png"width="30px" height="30px"  alt="Instagram"></a>
+      <a href="#" target="_blank"><img src="facebook-icon.png"width="30px" height="30px"  alt="Facebook"></a>
+      <a href="#" target="_blank"><img src="twitter-icon.png" width="30px" height="30px" alt="Twitter"></a>
+    </div>
+      <div class="column">
+    <p>
+    <ul type="none" >
+    <a href="demo.html"><li>Home</li></a><br>
+    <a href="demo.html #aboutus"><li>About Us</li></a><br>
+    <a class="active" href="waffles.html"><li>Menu</li></a><br>
+    <a href="reserve.html"><li>Book Table</li></a><br>
+    <a href="offers.html"><li>Offers</li></a>
+    </ul>
+     </p>
+  </div>
+    <div class="navigation-links">
+       
+      
+      <a href="#">Contact Us : <br><br></a>
+     
+<a href="tel:+1234567890">Phone: +1234567890</a>
+    </div>
+    
+    <div class="newsletter-subscription">
+      <p>Subscribe here</p>
+      <input type="email" placeholder="Enter your email"><br>
+      <button>💌 Subscribe</button>
+    </div>
+  </footer>
+
+</body>
+</html>

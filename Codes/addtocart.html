@@ -1,0 +1,426 @@
+<html>
+<head>
+  <title>Custom Cake Order</title>
+  <style>
+    body {
+
+  font-family: Arial, sans-serif;
+  background-image: url("menu1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+   margin: 0;
+      padding: 0;
+   
+}
+
+    
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #7d795e; 
+       
+      }
+       
+   .cake-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+     .cake-image {
+  width: 200px;
+  border-radius: 10px;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+    
+    .cake-image img {
+      width: 150px;
+      border-radius: 10px;
+    }
+    
+    .cake-details {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.cake-details h3 {
+  margin: 0;
+  color: #6d442a;
+  margin-bottom: 10px;
+}
+
+.cake-details p {
+  margin: 0;
+  color: #000000;
+  line-height: 1.4;
+}
+
+    
+    .cake-details input[type="number"] {
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 29%;
+      box-sizing: border-box;
+    }
+    
+    .cake-details button {
+      background-color: #6d442a;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    .cake-details button:hover {
+      background-color: #54381f;
+    }
+    
+    #cartSummary {
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #cartSummary h2 {
+      margin-top: 0;
+      color: #6d442a;
+    }
+    
+    #cartSummary p strong {
+      color: #6d442a;
+    }
+    
+    #clearCartBtn {
+      background-color: #c94c32;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    
+    #clearCartBtn:hover {
+      background-color: #a53e2b;
+    }
+   .popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      z-index: 9999;
+    }
+    
+    .popup-content {
+      text-align: center;
+    }
+    
+    .popup h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+    
+    .popup p {
+      margin-bottom: 10px;
+    }
+    
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      cursor: pointer;
+    }
+    
+   .order-summary {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+ #proceedBtn {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #proceedBtn:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body>
+<div style="background-color: #000; padding: 10px;">
+    <h1 style="color: #fff; text-align: center;">Custom Cake Order</h1>
+  </div>
+   
+  
+  <div class="cake-container">
+    <div class="cake-image">
+      <img src="cake1.jpg" alt="Heart Pinata Smash Cake">
+    </div>
+    <div class="cake-details">
+      <h3>Heart Pinata Smash Cake</h3>
+       <p class="price">
+      Price: ₹575 for 500g </p> <br>
+      <p>It looks as a marble shell type – heart shaped, on breaking it with a small wooden hammer, it explodes you with delicious creamy chocolates inside and starts the celebration.</p>
+      <input type="number" id="cake1_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(1, 575)">
+      <p id="cake1_price">Price: ₹0</p>
+      <button onclick="addToCart(1, 575)">Add to Cart</button>
+    </div>
+  </div>
+
+  
+  <div class="cake-container">
+  <div class="cake-image">
+    <img src="cake2.jpg" alt="Bomb Blast Cake">
+  </div>
+  <div class="cake-details">
+    <h3>Bomb Blast Cake</h3>
+    <p> 
+Price: ₹550 for 500g</p><br> 
+<p> As you light the cracker stick, the flaps of the shell open up to reveal the delectable homemade cake.
+</p>
+    <input type="number" id="cake2_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(2,550)">
+    <p id="cake2_price">Price: ₹0</p>
+    <button onclick="addToCart(2,550)">Add to Cart</button>
+  </div>
+</div>
+
+  
+  <div class="cake-container">
+  <div class="cake-image">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/raspberry-pink-velvet-cake-1574437052.jpg?crop=1xw:0.8333333333333334xh;center,top&resize=980:*" alt="Red Velvet Cake">
+  </div>
+  <div class="cake-details">
+    <h3>Red Velvet Cake</h3>
+    <p>Price: ₹590 for 500g</p><br>
+     <p> Made with either butter or oil, red velvet cake's color traditionally comes from the reaction of buttermilk and cocoa powder.</p>
+    <input type="number" id="cake3_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(3, 590)">
+    <p id="cake3_price">Price: ₹0</p>
+    <button onclick="addToCart(3, 590)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="cake-container">
+  <div class="cake-image">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/3-layer-yellow-butter-cake-1574436790.jpg?crop=1.00xw:0.834xh;0,0.110xh&resize=980:*" alt="Yellow Butter Cake">
+  </div>
+  <div class="cake-details">
+    <h3>Yellow Butter Cake</h3>
+    <p>Price: ₹635 for 500g</p><br>
+       </p>The ultimate birthday cake recipe! A classic yellow cake with a rich chocolate frosting and colorful sprinkles.  </p>
+    <input type="number" id="cake4_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(4, 635)">
+    <p id="cake4_price">Price: ₹0</p>
+    <button onclick="addToCart(4, 635)">Add to Cart</button>
+  </div>
+</div>
+  <div class="cake-container">
+  <div class="cake-image">
+    <img src="https://livforcake.com/wp-content/uploads/2017/07/black-forest-cake-7-768x1152.jpg" alt="Devil Food Cake">
+  </div>
+  <div class="cake-details">
+    <h3>Devil Food Cake</h3>
+    <p>Price: ₹615 for 500g</p><br>
+         <p>Made "devilish" by the addition of chocolate in the form of cocoa powder. Extra baking soda causes the crumb to have more air bubbles, giving it a light and airy texture.</p>
+    <input type="number" id="cake5_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(5, 615)">
+    <p id="cake5_price">Price: ₹0</p>
+    <button onclick="addToCart(5, 615)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="cake-container">
+  <div class="cake-image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMeH2APr7fOiLTAgvDI8XBXseFlm174V__-NuYYgnu&s" alt="Ferrero Rocher Cake">
+  </div>
+  <div class="cake-details">
+    <h3>Ferrero Rocher Cake</h3>
+    <p>Price: ₹910 for 500g</p><br>
+<p>This cake has layers of a chocolate and hazelnut sponge, milk chocolate ganache, and some ferrero.</p>
+    <input type="number" id="cake6_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(6, 910)">
+    <p id="cake6_price">Price: ₹0</p>
+    <button onclick="addToCart(6, 910)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="cake-container">
+  <div class="cake-image">
+    <img src="https://livforcake.com/wp-content/uploads/2017/07/black-forest-cake-7-768x1152.jpg" alt="Black Forest Cake">
+  </div>
+  <div class="cake-details">
+    <h3>Black Forest Cake</h3>
+    <p>Price: ₹695 for 500g<br>
+        It combines rich chocolate cake layers with fresh cherries, cherry liqueur, and a simple whipped cream frosting.</p>
+    <input type="number" id="cake7_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(7, 695)">
+    <p id="cake7_price">Price: ₹0</p>
+    <button onclick="addToCart(7, 695)">Add to Cart</button>
+  </div>
+</div>
+
+<div class="cake-container">
+  <div class="cake-image">
+    <img src="https://livforcake.com/wp-content/uploads/2018/03/birthday-cake-recipe-1-768x1152.jpg" alt="Classic Birthday Cake">
+  </div>
+  <div class="cake-details">
+    <h3>Classic Birthday Cake</h3>
+    <p>Price: ₹880 for 500g<br>
+       The ultimate birthday cake recipe! A classic yellow cake with a rich chocolate frosting and colorful sprinkles. </p>
+    <input type="number" id="cake8_weight" min="0" placeholder="Weight (grams)" oninput="updatePrice(8, 880)">
+    <p id="cake8_price">Price: ₹0</p>
+    <button onclick="addToCart(8, 880)">Add to Cart</button>
+  </div>
+</div>
+
+  <button id="clearCartBtn" onclick="clearCart()">Clear Cart</button>
+  <button id="proceedBtn" onclick="proceedToCheckout()">Proceed</button>
+<ul id="cart"></ul>
+
+  <div id="cartSummary"></div>
+   <div id="popup" class="popup">
+    <div class="popup-content">
+      <h2> Successfully added to the cart!</h2>
+     
+      <p>Pay to proceed further </p>
+      <p>Enjoy!</p>
+      <span id="popup-close" class="popup-close">&times;</span>
+    </div>
+  </div>
+  
+ <script>
+    var cartItems = [];
+    
+    function updatePrice(cakeId, basePrice) {
+      var weight = parseInt(document.getElementById("cake" + cakeId + "_weight").value);
+      var price = calculatePrice(weight, basePrice);
+      document.getElementById("cake" + cakeId + "_price").innerHTML = "Price: ₹" + price;
+    }
+
+    function addToCart(cakeId, basePrice) {
+      var weight = parseInt(document.getElementById("cake" + cakeId + "_weight").value);
+
+      if (weight <= 0) {
+        alert("Please enter a valid weight.");
+        return;
+      }
+
+      var price = calculatePrice(weight, basePrice);
+      var cakeName;
+
+     switch (cakeId) {
+        case 1:
+          cakeName = "Heart Pinata Smash  Cake";
+          break;
+        case 2:
+          cakeName = "Bomb Blast Cake";
+          break;
+        case 3:
+          cakeName = "Red Velvet Cake";
+          break;
+        case 4:
+          cakeName = "Yellow Butter Cake";
+          break;
+         case 5:
+          cakeName = "Devil Food Cake";
+          break;
+        case 6:
+          cakeName = "Ferrero Rocher Cake";
+          break;
+         case 7:
+          cakeName = " Black Forest Cake";
+          break; 
+         case 8:
+          cakeName = " Classic Birthday Cake";
+          break;
+         
+         
+         
+      }
+
+      var item = {
+        name: cakeName,
+        weight: weight,
+        price: price
+      };
+
+      cartItems.push(item);
+
+      updateCartSummary();
+      clearInputFields(cakeId);
+    }
+
+    function updateCartSummary() {
+      var summary = "<h2>Order Summary</h2>";
+      var total = 0;
+
+      for (var i = 0; i < cartItems.length; i++) {
+        var item = cartItems[i];
+        summary += "<p>" + item.name + " (" + item.weight + "g) - ₹" + item.price + "</p>";
+        total += item.price;
+      }
+
+      summary += "<p><strong>Total: ₹" + total + "</strong></p>";
+
+      document.getElementById("cartSummary").innerHTML = summary;
+    }
+
+    function clearInputFields(cakeId) {
+      document.getElementById("cake" + cakeId + "_weight").value = "";
+      document.getElementById("cake" + cakeId + "_price").innerHTML = "Price: ₹0";
+    }
+
+    function clearCart() {
+      cartItems = [];
+      updateCartSummary();
+    }
+    function proceedToCheckout() {
+      // Redirect to the new page
+      window.location.href = "checkout.html";
+    }
+
+    function calculatePrice(weight, basePrice) {
+      return (weight / 500) * basePrice;
+    }
+
+  document.addEventListener("DOMContentLoaded", function() {
+      var addToCartButtons = document.querySelectorAll(".cake-details button");
+
+      for (var i = 0; i < addToCartButtons.length; i++) {
+        addToCartButtons[i].addEventListener("click", function() {
+          document.getElementById("popup").style.display = "flex";
+        });
+      }
+
+      // Add event listener to close the popup when the close button is clicked
+      document.getElementById("popup-close").addEventListener("click", function() {
+        document.getElementById("popup").style.display = "none";
+      });
+    });
+  </script>
+</body>
+</html>

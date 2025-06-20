@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<Title>Restaurant</title>
+<style>
+*{
+margin:0;
+padding:  0;
+box-sizing: border-box;
+font-family: sans-serif;
+}
+
+
+.topnav {
+ overflow: hidden;
+}
+/* Style the links inside the navigation bar */
+
+
+.topnav a {
+  float: left;
+  color: #673b18;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "sans-serif";
+  font-size: 24px;
+}
+
+/* Change the color of links on hover */
+
+.topnav a:hover {
+  color: #673b18S;
+background-color:#a06a4a;
+}
+
+/* Right-aligned section inside the top navigation */
+
+.topnav a.rightalign {
+  float: right;
+}
+
+section
+{
+position: relative;
+width: 100%;
+min-height: 100vh;
+padding: 100px;
+display: flex;
+justify-content: space-between;
+align-items:center;
+
+ background-image: url("bg1.jpg");
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+
+}
+.content 
+{
+  display: flex;
+position: relative;
+width: 100%;
+justify-content: space-between;
+align-items: center;
+}
+
+.content .textbox{
+position: relative;
+max-width: 600px;
+}
+.content .textbox h1
+{
+color:#fff;
+
+font-size:2em;
+
+
+}
+.content .textbox h2
+{
+color:#fff;
+font-size:3em;
+line-height:1.4em;
+font-weight:500;
+}
+.content .textbox h2 span
+{
+color: #f2f2f2;
+font-size:1.2em;
+font-weight:900;
+}
+.content .textbox p
+{
+color:#fff;
+}
+.content .textbox a
+{
+display: inline-block;
+margin-top: 20px;
+padding: 8px 20px;
+background: #a06a4a;
+color: #fff;
+border-radius: 40px;
+font-weight:500;
+letter-spacing: 1px;
+text-decoration: none;
+}
+.content .imgBox
+{
+width: 600px;
+display: flex;
+justify-content: flex-end;
+padding-right: 50px;
+margin-top: 50px;
+}
+.content .imgBox img
+{
+max-width: 340px;
+}
+.thumb
+{
+position:absolute;
+left:50%;
+bottom:100px;
+transform:translateX(-50%);
+display:inline-flex;
+}
+.thumb li
+{
+list-style:none;
+display: inline-block;
+margin 0 20px;
+cursor:pointer;
+transition:0.5s;
+}
+.thumb li:hover
+{
+transform: translateY(-15px);
+}
+.thumb li img
+{
+max-width: 60px;
+}
+
+.aboutusImage
+{padding:10px;
+float:left;}
+#aboutus{
+padding:70px;
+background-color:#835c3b
+}
+#aboutus h1{
+text-align:center;
+}
+.container {
+    width: 100%;
+    height: 50vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #835C3B;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #fff;
+
+}
+
+
+.reviewSection {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.reviewItem {
+    width: 400px;
+    padding: 10px;
+    margin: 1rem;
+    cursor: pointer;
+    border-radius: 10px;
+  
+    border: 1px solid #10102a;
+    transition: all .2s linear;
+}
+
+
+
+.top {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top ul {
+    display: flex;
+    list-style: none;
+}
+
+.top ul li {
+    padding-left: 4px;
+}
+
+article p {
+color:#fff;
+    font-size: 15px;
+    font-weight: 400px;
+    margin-bottom: 1rem;
+    font-family: system-ui;
+}
+
+
+@media screen and (max-width:700px) {
+    .container {
+        height: auto;
+    }
+
+    .description {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .reviewSection {
+        padding: 0;
+    }
+
+    .reviewItem {
+        width: 100%;
+    }
+
+
+    .top {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+}    
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    
+    .footer {
+      background-color: #352b19;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      bottom: 0;
+      width: 100%;
+      animation: slide-up 0.5s ease;
+    }
+    
+    .footer p {
+      margin: 0;
+    }
+    
+    .footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    .footer .social-icons a {
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-color: #fff;
+      color: #352b19;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 30px;
+      margin-right: 5px;
+      transition: background-color 0.3s;
+    }
+    
+    .footer .social-icons a:hover {
+      background-color: #f9f9f9;
+    }
+    
+    .footer .navigation-links a {
+      margin-right: 10px;
+      color: #fff;
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+    
+    .footer .navigation-links a:hover {
+      opacity: 0.8;
+    }
+    
+    .footer .newsletter-subscription input[type="email"] {
+      padding: 5px;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      width: 200px;
+    }
+    
+    .footer .newsletter-subscription button {
+      background-color: #fff;
+      color: #352b19;
+      padding: 5px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    @keyframes slide-up {
+      from {
+        transform: translateY(100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+</style>
+</head>
+<body>
+  <div class="topnav" id="home">
+    <a class="active" href="#home">Home</a>
+    <a href="#aboutus">About Us</a>
+    <a href="icecreams.html">Menu</a>
+    <a href="video.html">Our Cafe</a>
+      <a href="sign.html" class="rightalign">Sign Up</a>
+      <a href="login.html" class="rightalign">Login</a>
+  </div>
+<section>
+<div class="content">
+   <div class="textbox">
+       <h2> You're at the Right Place <br> It's <span> CAFE VOILA</span></h2>
+        <p> 
+LIVE . LOVE . EAT</p>
+        <a href="reserve.html"> Book A Table</a>
+    </div>
+    <div class="imgBox">
+      <img src="img1.png"  class="icecream">
+  </div>
+ </div>
+
+
+<ul class="thumb">
+<li><img src="thumb1.png" onclick="imgSlider('img1.png')"></li>
+<li><img src="thumb2.png"onclick="imgSlider('img2.png')"></li>
+<li><img src="thumb3.png" onclick="imgSlider('img3.png')"></li>
+</ul>
+</section>
+
+<!-- About Section -->
+  <div  id="aboutus">
+    <div class="">
+     <img src="img1.png" class="aboutusImage"  alt="Table Setting" width="300" height="300">
+    </div>
+
+    <div class="" >
+      <h1 style="color:#ffffff"class="">About Us</h1>
+      <h5  style="color:#ffffff"class="">Since 1994</h5>
+      <p  style="color:#ffffff" class="">Creamy and Delicious Cafe is a charming little cafe nestled in the heart of a bustling neighborhood. As you step inside, you are immediately greeted by the soothing aroma of freshly brewed coffee and the inviting ambiance that exudes warmth and comfort. The interior is tastefully decorated with a blend of rustic and modern elements, featuring cozy seating areas, soft lighting, and vibrant artwork adorning the walls.
+
+The cafe takes pride in its wide selection of creamy and delectable treats. Their menu offers an array of luscious desserts, ranging from creamy cheesecakes and indulgent chocolate mousses to silky-smooth ice cream sundaes and velvety fruit parfaits. Each dessert is meticulously crafted using the finest ingredients, ensuring an exquisite balance of flavors and a heavenly melt-in-your-mouth experience.
+
+To complement their delightful menu, Creamy and Delicious Cafe also offers a cozy outdoor seating area where patrons can enjoy their treats while basking in the warm sunlight or savoring a cool breeze. The friendly and attentive staff provide exceptional service, ensuring that each visit to the cafe is a delightful experience.
+
+Whether you're seeking a peaceful spot to enjoy a quiet afternoon, a cozy venue for a catch-up with friends, or a charming place for a romantic rendezvous, Creamy and Delicious Cafe caters to all occasions. It's a haven for those with a sweet tooth and a love for creamy, delectable indulgences, where every visit is an opportunity to treat your senses to a truly delightful experience.
+.</p>
+       </div>
+  </div>
+
+
+<div class="container">
+        <h2> Our Happy Clients </h2>
+     
+      <!-- Clients Review Section -->
+        <div class="reviewSection">
+
+        <!-- Clients Review-1 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        
+                        <span>Sarayu Krishna</span>
+                    </div>
+                </div>
+                <article>
+                    <p class="review"> "The ambiance was cozy and inviting, perfect for a relaxing afternoon.  Cafe Voila is now my go-to spot for indulging in heavenly treats. The barista recommended their specialty latte, and it was a delightful companion to my dessert."</p>
+                    
+                </article>
+            </div>
+
+        <!-- Clients Review-2 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        
+                        <span>Sumajali</span>
+                    </div>
+                </div>
+                <article>
+                    <p class="review">"I stumbled upon  Cafe Voila  while exploring the neighborhood, and I`m so glad I did! I opted for their choco lava cake, and it was a chocoholic's dream come true! The choco lava was rich, with layers of decadence that left me craving for more"</p>
+                    
+                </article>
+            </div>
+
+        <!-- Clients Review-3 Section Starts from Here  -->
+            <div class="reviewItem">
+                <div class="top">
+                    <div class="clientImage">
+                        <span>Nalini S.</span>
+                    </div>
+                </div>
+                <article>
+                    <p class="review">"The combination of creamy yogurt, ripe fruits, and a hint of honey is simply delightful.
+The staff is always welcoming and attentive, making sure every visit is a memorable one.
+ Cafe Voila is a gem, and I highly recommend it to anyone with a sweet tooth."
+                </article>
+            </div>
+        </div>
+    </div>
+ <!-- Your website content goes here -->
+  
+  <footer class="footer">
+    <div class="contact-information">
+      <p>Cafe Voila</p>
+      
+      <p>Email: <a href="mailto:info@restaurant.com">info@restaurant.com</a></p>
+      <p>Address: Bangalore, Karnataka<br><a style="color:bisque;"href="https://www.google.com/maps/place/Cafe+Voila/@12.882231,74.8381067,17z/data=!3m1!4b1!4m6!3m5!1s0x3ba35b7bb6529a5f:0x8dffda8b723dec95!8m2!3d12.882231!4d74.8406816!16s%2Fg%2F11kc2ml2dh?entry=ttu">&#x1F4CD;Know Our Location</a></p>
+    </div>
+    
+    <div class="opening-hours">
+      <p>Opening Hours:</p>
+      <p>Monday-Saturday: 11:00 AM - 10:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+    
+    <div class="social-icons">
+      
+      <a href="#" target="_blank"><img src="instagram-icon.png"width="30px" height="30px"  alt="Instagram"></a>
+      <a href="#" target="_blank"><img src="facebook-icon.png"width="30px" height="30px"  alt="Facebook"></a>
+      <a href="#" target="_blank"><img src="twitter-icon.png" width="30px" height="30px" alt="Twitter"></a>
+    </div>
+      <div class="column">
+    <p>
+    <ul type="none" >
+    <a class="active" href="#home"><li>Home</li></a><br>
+    <a href="#aboutus"><li>About Us</li></a><br>
+    <a href="icecreams.html"><li>Menu</li></a><br>
+    <a href="reserve.html"><li>Book Table</li></a><br>
+    <a href="offers.html"><li>Offers</li></a>
+    </ul>
+     </p>
+  </div>
+    <div class="navigation-links">
+       
+      
+      <a href="#">Contact Us Info <br> <br></a>
+     <p><a href="tel:+1234567890">Phone: +1234567890</a></p>
+    </div>
+    
+    <div class="newsletter-subscription">
+      <p>Subscribe here</p>
+      <input type="email" placeholder="Enter your email"><br>
+      <button>💌 Subscribe</button>
+    </div>
+  </footer>
+
+</div>
+    
+
+
+
+<script type="text/javascript">
+function imgSlider(anything){
+document.querySelector('.icecream').src=anything;
+}
+</script>
+</body>
+</html>
