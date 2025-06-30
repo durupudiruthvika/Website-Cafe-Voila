@@ -103,8 +103,10 @@ This project delivers a **responsive frontend website** for **Cafe Voila**, a pr
 
 ## 🎓 Mentors
 - **Dr. Nalini S.**
-Assistant Professor (Sr. Gd.), 
-Amrita School of Computing, Amrita Vishwa Vidyapeetham, Bengaluru Campus.
+  Assistant Professor (Sr. Gd.),
+  Department of Computer Science and Engineering  
+  Amrita School of Computing, Bengaluru  
+  Amrita Vishwa Vidyapeetham, India
 ---
 
 ## 🙏 Acknowledgments
