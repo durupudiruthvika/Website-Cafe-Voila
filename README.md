@@ -1,4 +1,4 @@
-# 🍰 Cafe Voila Website: Frontend Web Development with Modern UI/UX
+# 🍰 Cafe Voila Website: Frontend Web Development
 
 ## 📑 Table of Contents
 - [📋 Project Overview](#project-overview)
