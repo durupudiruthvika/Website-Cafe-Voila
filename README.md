@@ -95,9 +95,9 @@ This project delivers a **responsive frontend website** for **Cafe Voila**, a pr
 **Amrita School of Computing, Bengaluru**  
 **Amrita Vishwa Vidyapeetham, India**
 
-- **[Naga Ruthvika Durupudi]** - *Frontend Developer & UI Designer*
-- **[Nagasarapu Sarayu Krishna]** - *JavaScript Developer*  
-- **[Team Member 3 Name]** - *CSS Specialist & Responsive Design*
+- **Naga Ruthvika Durupudi** - 
+- **Nagasarapu Sarayu Krishna** 
+- **Segu Sumanjali** 
 
 ---
 
